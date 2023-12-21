@@ -20,7 +20,7 @@ body.dark-mode {
 #intro {
     position: relative;
     height: 120vh;
-    background: url('/Users/ananditasingh/Desktop/Screenshot 2023-12-19 at 10.43.05 PM.png') center/cover no-repeat;
+    background: url('background.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
