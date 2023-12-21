@@ -3,152 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blogpage/style.css">
-    <title>Your Blog</title>
-</head>
-<body background = "background.png">
-
+ 
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #FFFCF2;
+            
+
+        }
+
+        body.dark-mode {
+            
+            background-color: #000000;
+            transition:3s;
+            color: #ffffff;
+
+        }
+
         
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #FFFCF2;
-    
+        #intro {
+            position: relative;
+            height: 120vh;
+            background: url('/Users/ananditasingh/Desktop/Screenshot 2023-12-19 at 10.43.05 PM.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
 
-}
+        #blog-button {
+            position:absolute;
+            top: 75px;
+            left: 220px;
+            color: #3498db;
+        }
 
-body.dark-mode {
-    
-    background-color: #000000;
-    transition:3s;
-    color: #ffffff;
-
-}
-
-
-#intro {
-    position: relative;
-    height: 120vh;
-    background: url('background.png') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-#blog-button {
-    position:absolute;
-    top: 75px;
-    left: 220px;
-    color: #3498db;
-}
-
-#close-button {
-    position:absolute;
-    top: 09px;
-    left: 261px;
-    font-size: 54px;
-    color: rgb(220, 0, 0);
-    cursor: pointer;
-}
+        #close-button {
+            position:absolute;
+            top: 09px;
+            left: 261px;
+            font-size: 54px;
+            color: rgb(220, 0, 0);
+            cursor: pointer;
+        }
 
 
 #blog-section {
-
-padding: 50px;
-text-align: left;
+  
+  padding: 50px;
+  text-align: left;
 }
 
 
 .blog-container {
-display: flex;
-align-items: center;
-margin-bottom: 40px;
-margin-left: 160px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 160px;
 }
 
 .blog-image {
-width: 200px;
-height: 200px;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-margin-right: 20px;
-margin-left: 60px;
-transition: transform 0.3s ease-in-out;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  margin-left: 60px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .blog-image:hover {
-transform: scale(1.25);
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-border-color: #5B2906; /* Choose your desired border color */
+  transform: scale(1.25);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  border-color: #5B2906; /* Choose your desired border color */
 }
 
 .blog-title {
-font-size: 24px;
-font-weight:bold;
-color: #d97c39;
-margin-bottom: 10px;
+  font-size: 24px;
+  font-weight:bold;
+  color: #d97c39;
+  margin-bottom: 10px;
 }
 
 .blog-description {
-color: #a19b9b;
-
-margin-bottom: 15px;
+  color: #a19b9b;
+  
+  margin-bottom: 15px;
 }
 
 .blog-content {
-flex: 1;
-transition: transform 0.2s ease-in-out;
-margin-left: 40px;
+  flex: 1;
+  transition: transform 0.2s ease-in-out;
+  margin-left: 40px;
 }
 
 .read-more {
-text-decoration: none;
-color: #d97c39;
-font-weight: bold;
-transition: color 0.3s;
-}
+      text-decoration: none;
+      color: #d97c39;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-.read-more:hover {
-color: rgb(217, 145, 94); /* Darker color on hover */
-}
+    .read-more:hover {
+      color: rgb(217, 145, 94); /* Darker color on hover */
+    }
 
-#dark-mode-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #253f50;
-    color: #fff;
-    border-radius: 6px;
-}
+    #dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #253f50;
+            color: #fff;
+            border-radius: 6px;
+        }
 
 
-#back-button {
-    position: absolute;
-    top: 96px;
-    left: 365px;
-    size-adjust:50px;
-    padding: 10px;
-    background-color: hwb(0 100% 0%);
-    color: rgb(2, 1, 1);
-    border:black;
-    border-radius: 10px;
-    cursor: pointer;
-}
+        #back-button {
+            position: absolute;
+            top: 96px;
+            left: 365px;
+            size-adjust:50px;
+            padding: 10px;
+            background-color: hwb(0 100% 0%);
+            color: rgb(2, 1, 1);
+            border:black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
 .heading{
-text-align: center;
-align-items: center;
-justify-content: center;
-
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+ 
 }
-    
+
     </style>
-    <div id="intro"></div>
+    <title>Your Blog</title>
+</head>
+<body>
+
+    <div id ="intro"></div>
 
     <!-- Introduction Section -->
     <div id="blog-button" onclick="scrollToBlogs()">
@@ -156,16 +155,16 @@ justify-content: center;
         <div id="close-button" onclick="closePage()">✖</div>
     </div>
 
+
     <!-- Blog Section -->
     <div id="blog-section">
-        <div class="heading">
+        <div class = "heading">
             <h2>blogs</h2>
-        </div>
+           </div>
 
-        <br><br><br><br><br><br>
-
+<br><br><br><br><br><br>
         <div class="blog-container">
-          <img class="blog-image" src="/Users/ananditasingh/Desktop/blogsite/images /blog1.png" alt="Blog 1">
+          <img class="blog-image" src="/Users/ananditasingh/Desktop/Screenshot 2023-12-19 at 6.31.50 PM.png" alt="Blog 1">
           <div class="blog-content">
             <h3 class="blog-title">Blog Title 1</h3>
             <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -174,7 +173,7 @@ justify-content: center;
         </div>
       
         <div class="blog-container">
-          <img class="blog-image" src="/Users/ananditasingh/Desktop/blogsite/images /blog2.png" alt="Blog 2">
+          <img class="blog-image" src="/Users/ananditasingh/Desktop/Screenshot 2023-12-19 at 6.32.37 PM.png" alt="Blog 2">
           <div class="blog-content">
             <h3 class="blog-title">Blog Title 2</h3>
             <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -183,7 +182,7 @@ justify-content: center;
         </div>
       
         <div class="blog-container">
-          <img class="blog-image" src="/Users/ananditasingh/Desktop/blogsite/images /blog3.png" alt="Blog 3">
+          <img class="blog-image" src="/Users/ananditasingh/Desktop/Screenshot 2023-12-19 at 6.35.05 PM.png" alt="Blog 3">
           <div class="blog-content">
             <h3 class="blog-title">Blog Title 3</h3>
             <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -192,7 +191,7 @@ justify-content: center;
         </div>
 
         <div class="blog-container">
-            <img class="blog-image" src="/Users/ananditasingh/Desktop/blogsite/images /blog4.png" alt="Blog 4">
+            <img class="blog-image" src="/Users/ananditasingh/Desktop/Screenshot 2023-12-21 at 2.36.43 AM.png" alt="Blog 4">
             <div class="blog-content">
               <h3 class="blog-title">Blog Title 4</h3>
               <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -201,7 +200,7 @@ justify-content: center;
           </div>
 
           <div class="blog-container">
-            <img class="blog-image" src="/Users/ananditasingh/Desktop/blogsite/images /blog5.png" alt="Blog 5">
+            <img class="blog-image" src="/Users/ananditasingh/Desktop/Screenshot 2023-12-16 at 2.46.33 AM.png" alt="Blog 5">
            
             <div class="blog-content">
               <h3 class="blog-title">Blog Title 5</h3>
@@ -209,13 +208,36 @@ justify-content: center;
               <a class="read-more" href="#read-more2">Read More</a>
             </div>
           </div>
+      
 
-    </div>
-
-    <!-- Back Button --> <!-- READ MODE --> 
+    <!-- Back Button -->
     <button id="back-button" onclick="goBack()"><b>←</b> </button>
+
     <div id="dark-mode-toggle" onclick="toggleDarkMode()">Read Mode</div>
 
-    <script src="blogpage/script.js"></script>
+
+    <script>
+function closePage() {
+    var currentWindow = window.open('', '_self', '');
+    currentWindow.close();
+}
+
+
+        function scrollToBlogs() {
+            document.getElementById('blog-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+
+    </script>
+
 </body>
 </html>
+
