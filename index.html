@@ -218,8 +218,12 @@
 
     <script>
 function closePage() {
-    var currentWindow = window.open('', '_self', '');
-    currentWindow.close();
+    if (window.opener) {
+        window.opener.location.reload(true); // Reload the parent window
+        window.close(); // Close the current window
+    } else {
+        window.close(); // Close the current window
+    }
 }
 
 
