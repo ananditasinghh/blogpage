@@ -142,29 +142,50 @@
  
         }
 
-        #fullscreen-button {
-            position: absolute;
-            bottom: 0px;
-            left: 440px; /* Adjust the positioning as needed */
+        .share-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .share-button {
             padding: 10px;
             background-color: #3498db;
             color: #fff;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
         }
+ 
 
     </style>
     <title>Your Blog</title>
 </head>
 <body>
 
+        <div class="share-buttons">
+        <!-- Facebook Share Button -->
+        <button class="share-button" onclick="shareOnFacebook()">Share on Facebook</button>
+
+        <!-- Twitter Share Button -->
+        <button class="share-button" onclick="shareOnTwitter()">Share on Twitter</button>
+
+        <!-- LinkedIn Share Button -->
+        <button class="share-button" onclick="shareOnLinkedIn()">Share on LinkedIn</button>
+    </div>
+
+    
+
     <div id ="intro"></div>
 
     <!-- Introduction Section -->
     <div id="blog-button" onclick="scrollToBlogs()">
         <h1>BLOG</h1>
-        <div id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</div>
+       
         <div id="close-button" onclick="closePage()">✖</div>
     </div>
 
@@ -231,16 +252,6 @@
 
     <script>
 
-        function toggleFullscreen() {
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-            } else {
-                document.documentElement.requestFullscreen().catch(err => {
-                    console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
-                });
-            }
-        }
-        
       function closePage() {
           if (window.opener) {
           window.opener.postMessage('close', '*');
@@ -269,6 +280,22 @@ window.addEventListener('message', function (event) {
             document.body.classList.toggle('dark-mode');
         }
 
+                function shareOnFacebook() {
+            // Replace 'your-url' with the URL you want to share
+            window.open('https://www.facebook.com/sharer/sharer.php?u=your-url', '_blank');
+        }
+
+        function shareOnTwitter() {
+            // Replace 'your-text' and 'your-url' with the text and URL you want to share
+            window.open(`https://twitter.com/intent/tweet?text=your-text&url=your-url`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            // Replace 'your-url' with the URL you want to share
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=your-url`, '_blank');
+        }
+
+        
 
     </script>
 
