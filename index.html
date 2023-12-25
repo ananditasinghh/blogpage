@@ -142,7 +142,7 @@
  
         }
 
-        .share-buttons {
+        #share-button {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -152,8 +152,10 @@
             z-index: 1000;
         }
 
-        .share-button {
+        #share-button {
             padding: 10px;
+            top: 96px;
+            left: 300px;
             background-color: #3498db;
             color: #fff;
             border: none;
@@ -167,18 +169,6 @@
 </head>
 <body>
 
-        <div class="share-buttons">
-        <!-- Facebook Share Button -->
-        <button class="share-button" onclick="shareOnFacebook()">Share on Facebook</button>
-
-        <!-- Twitter Share Button -->
-        <button class="share-button" onclick="shareOnTwitter()">Share on Twitter</button>
-
-        <!-- LinkedIn Share Button -->
-        <button class="share-button" onclick="shareOnLinkedIn()">Share on LinkedIn</button>
-    </div>
-
-    
 
     <div id ="intro"></div>
 
@@ -246,11 +236,19 @@
 
     <!-- Back Button -->
     <button id="back-button" onclick="goBack()"><b>←</b> </button>
-
+        
+ <button id="share-button" onclick="shareOnTwitter()">Share on Twitter</button>
+        
     <div id="dark-mode-toggle" onclick="toggleDarkMode()">Read Mode</div>
 
 
     <script>
+
+        function shareOnTwitter() {
+            // Replace 'your-text' and 'your-url' with the text and URL you want to share
+            window.open(`https://twitter.com/intent/tweet?text=your-text&url=your-url`, '_blank');
+        }
+        
 
       function closePage() {
           if (window.opener) {
