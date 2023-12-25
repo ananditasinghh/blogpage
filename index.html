@@ -219,12 +219,18 @@
     <script>
 function closePage() {
     if (window.opener) {
-        window.opener.location.reload(true); // Reload the parent window
-        window.close(); // Close the current window
-    } else {
-        window.close(); // Close the current window
+        window.opener.postMessage('close', '*');
     }
+    window.close();
 }
+
+// Listen for messages
+window.addEventListener('message', function (event) {
+    if (event.data === 'close') {
+        window.close();
+    }
+});
+
 
 
         function scrollToBlogs() {
